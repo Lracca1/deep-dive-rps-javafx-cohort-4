@@ -52,7 +52,7 @@ public class Controller {
 
   @FXML
   private void initialize() {
-    terrain = new Terrain(new Random());
+    terrain = new Terrain(100, new Random());
     terrainView.setSource(terrain.getCells());
     defaultViewWidth = terrainView.getWidth();
     defaultViewHeight = terrainView.getHeight();
@@ -88,7 +88,7 @@ public class Controller {
   }
 
   @FXML
-  private void stop(ActionEvent actionEvent) {
+  public void stop(ActionEvent actionEvent) {
     running = false;
     runner = null;
     start.setDisable(false);
